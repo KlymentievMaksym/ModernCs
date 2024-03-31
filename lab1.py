@@ -16,7 +16,6 @@ def transorm_from_csv_to_json(csv_from_test=None, show_stdout=True, receive_stdo
         show_stdout = False
         show_stderr = False
         text_csv = csv_from_test
-    # print(text_csv)
     is_first_line = True
     full_text = []
     exit_number = 0
