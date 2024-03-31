@@ -33,7 +33,7 @@ jobs:
 
       - name: Test with pytest
         run: |
-            pytest --cov-report "xml:coverage.xml"
+            pytest --cov-report "xml:coverage.xml"  --cov=.
 
       - name: "Running unit test..."
         run: python test_*.py
