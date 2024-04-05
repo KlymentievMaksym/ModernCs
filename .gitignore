@@ -6,3 +6,4 @@ stdin.txt
 __pycache__/
 
 *coverage*
+#test
