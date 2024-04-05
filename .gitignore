@@ -1,6 +1,3 @@
-*.csv
-*.txt
-!NOAA_ID1_12-10-2023-18-58-14.csv
 
 __pycache__/
 
