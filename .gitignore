@@ -5,4 +5,4 @@ stdin.txt
 
 __pycache__/
 
-*coverage*
+# *coverage*
