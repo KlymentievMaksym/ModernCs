@@ -9,13 +9,23 @@
 import sys
 
 
-def transorm_from_csv_to_json(csv_from_test=None, show_stdout=True, receive_stdout=False, show_stderr=True): #, receive_stderr=False
+def transorm_from_csv_to_json(csv_from_test=None, show_stdout=True, receive_stdout=False, show_stderr=True, absolute_false=True): #, receive_stderr=False
     if csv_from_test is None:
         text_csv = sys.stdin.readlines()
     else:
-        show_stdout = False
-        show_stderr = False
+        if absolute_false:
+            show_stdout = False
+            show_stderr = False
         text_csv = csv_from_test
+    
+    # print(type(text_csv))
+    
+    if type(text_csv) != list:
+        if show_stderr:
+            sys.stderr.write(f"Values in file are invalid\n")
+        exit_number = 2
+        return exit_number
+    
     is_first_line = True
     full_text = []
     exit_number = 0
